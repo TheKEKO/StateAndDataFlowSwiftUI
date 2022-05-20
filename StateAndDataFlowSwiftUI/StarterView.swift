@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct StarterView: View {
+    @EnvironmentObject private var userManager: UserManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            if !userManager.name.isEmpty {
+                ContentView()
+            } else {
+                RegisterView()
+            }
+        }
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct StarterView_Previews: PreviewProvider {
     static var previews: some View {
         StarterView()
+            .environmentObject(UserManager())
     }
 }
