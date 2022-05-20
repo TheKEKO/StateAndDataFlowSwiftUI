@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
+
+final class UserManager: ObservableObject {
+    @Published var isRegistered = false
+    @AppStorage("name") var name = ""
+}
