@@ -17,7 +17,7 @@ struct RegisterView: View {
                 TextField("Enter your name...", text: $name)
                     .multilineTextAlignment(.center)
                 Text("\(name.count)")
-                    .foregroundColor(name.count < 3 ? .red : .green)
+                    .foregroundColor(name.count > 2 ? .green : .red)
                     .padding(.trailing, 20)
             }
             Button(action: registerUser) {
@@ -26,14 +26,20 @@ struct RegisterView: View {
                     Text("OK")
                 }
             }
-            .disabled(name.count < 3)
+            .disabled(checkText())
         }
     }
     
     private func registerUser() {
-        if !name.isEmpty {
-            userManger.name = name
-            userManger.isRegistered.toggle()
+        user.name = name
+    }
+    
+    
+    private func checkText() -> Bool{
+        if name.count > 2 {
+            return false
+        } else {
+            return true
         }
     }
 }
