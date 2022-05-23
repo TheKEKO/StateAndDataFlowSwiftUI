@@ -8,44 +8,59 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @EnvironmentObject private var userManger: UserManager
-    @State private var name = ""
+    
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         VStack {
-            HStack {
-                TextField("Enter your name...", text: $name)
-                    .multilineTextAlignment(.center)
-                Text("\(name.count)")
-                    .foregroundColor(name.count > 2 ? .green : .red)
-                    .padding(.trailing, 20)
-            }
+            UserNameTF(
+                name: $userManager.user.name,
+                nameIsValid: userManager.nameIsValid
+            )
             Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
             }
-            .disabled(checkText())
+            .disabled(!userManager.nameIsValid)
         }
+        .padding()
     }
     
     private func registerUser() {
-        user.name = name
-    }
-    
-    
-    private func checkText() -> Bool{
-        if name.count > 2 {
-            return false
-        } else {
-            return true
+        if !userManager.user.name.isEmpty {
+            userManager.user.isRegistered.toggle()
+            DataManager.shared.save(user: userManager.user)
         }
     }
 }
 
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterView()
+struct UserNameTF: View {
+    
+    @Binding var name: String
+    var nameIsValid = false
+    
+    var body: some View {
+        ZStack {
+            TextField("Type your name...", text: $name)
+                .multilineTextAlignment(.center)
+            HStack {
+                Spacer()
+                Text("\(name.count)")
+                    .font(.callout)
+                    .foregroundColor(nameIsValid ? .green : .red)
+                    .padding([.top, .trailing])
+            }
+            .padding(.bottom)
+        }
     }
 }
+
+struct Register_Previews: PreviewProvider {
+    static var previews: some View {
+        RegisterView()
+            .environmentObject(UserManager())
+    }
+}
+

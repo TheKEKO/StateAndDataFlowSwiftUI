@@ -68,15 +68,15 @@
 			isa = PBXGroup;
 			children = (
 				D495A2202836AE9C006F6E01 /* StateAndDataFlowSwiftUIApp.swift */,
-				D495A2222836AE9C006F6E01 /* ContentView.swift */,
-				D482383B2838272A001D63CF /* RegisterView.swift */,
 				D482383D28382747001D63CF /* StarterView.swift */,
+				D482383B2838272A001D63CF /* RegisterView.swift */,
 				D49F3CD2283AD3C90046AE0F /* TimerView.swift */,
 				D482384328383A2C001D63CF /* ButtonView.swift */,
 				D49F3CD0283AD3AA0046AE0F /* ButtonAppearanceModifier.swift */,
 				D482383F2838277B001D63CF /* TimeCounter.swift */,
 				D4823841283827A0001D63CF /* UserManager.swift */,
 				D49F3CCE283AD3830046AE0F /* DataManager.swift */,
+				D495A2222836AE9C006F6E01 /* ContentView.swift */,
 				D495A2242836AE9D006F6E01 /* Assets.xcassets */,
 				D495A2262836AE9D006F6E01 /* Preview Content */,
 			);

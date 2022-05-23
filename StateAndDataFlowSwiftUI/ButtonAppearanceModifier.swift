@@ -7,14 +7,27 @@
 
 import SwiftUI
 
-struct ButtonAppearanceModifier: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ButtonAppearanceModifier: ViewModifier {
+    
+    let color: Color
+    
+    func body(content: Content) -> some View {
+        content
+            .frame(width: 200, height: 60)
+            .background(color)
+            .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .stroke(Color.black, lineWidth: 4)
+            )
     }
 }
 
-struct ButtonAppearanceModifier_Previews: PreviewProvider {
-    static var previews: some View {
-        ButtonAppearanceModifier()
+extension View {
+    func buttonAppearance(_ color: Color) -> some View {
+        ModifiedContent(
+            content: self,
+            modifier: ButtonAppearanceModifier(color: color)
+        )
     }
 }

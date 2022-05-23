@@ -7,14 +7,30 @@
 
 import SwiftUI
 
-struct DataManager: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+final class DataManager {
+    
+    static let shared = DataManager()
+    
+    @AppStorage("user") private var userData: Data?
+    
+    private init() {}
+    
+    func save(user: User) {
+        userData = try? JSONEncoder().encode(user)
     }
-}
-
-struct DataManager_Previews: PreviewProvider {
-    static var previews: some View {
-        DataManager()
+    
+    func fetchUser() -> User {
+        guard
+            let user = try? JSONDecoder().decode(User.self, from: userData ?? Data())
+        else {
+            return User()
+        }
+        return user
+    }
+    
+    func clear(userManager: UserManager) {
+        userManager.user.isRegistered = false
+        userManager.user.name = ""
+        userData = nil
     }
 }
