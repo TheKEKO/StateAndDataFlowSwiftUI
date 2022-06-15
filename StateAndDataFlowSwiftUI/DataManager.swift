@@ -8,7 +8,6 @@
 import SwiftUI
 
 final class DataManager {
-    
     static let shared = DataManager()
     
     @AppStorage("user") private var userData: Data?

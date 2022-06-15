@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TimerView: View {
-    
     @StateObject private var timer = TimeCounter()
     @EnvironmentObject private var userManager: UserManager
             

@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 final class UserManager: ObservableObject {
-    
     @Published var user = User()
     
     var nameIsValid: Bool {

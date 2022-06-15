@@ -13,7 +13,6 @@
 		D4823842283827A0001D63CF /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4823841283827A0001D63CF /* UserManager.swift */; };
 		D482384428383A2C001D63CF /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482384328383A2C001D63CF /* ButtonView.swift */; };
 		D495A2212836AE9C006F6E01 /* StateAndDataFlowSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495A2202836AE9C006F6E01 /* StateAndDataFlowSwiftUIApp.swift */; };
-		D495A2232836AE9C006F6E01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495A2222836AE9C006F6E01 /* ContentView.swift */; };
 		D495A2252836AE9D006F6E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D495A2242836AE9D006F6E01 /* Assets.xcassets */; };
 		D495A2282836AE9D006F6E01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D495A2272836AE9D006F6E01 /* Preview Assets.xcassets */; };
 		D49F3CCF283AD3830046AE0F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F3CCE283AD3830046AE0F /* DataManager.swift */; };
@@ -29,7 +28,6 @@
 		D482384328383A2C001D63CF /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D495A21D2836AE9C006F6E01 /* StateAndDataFlowSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlowSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D495A2202836AE9C006F6E01 /* StateAndDataFlowSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowSwiftUIApp.swift; sourceTree = "<group>"; };
-		D495A2222836AE9C006F6E01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D495A2242836AE9D006F6E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D495A2272836AE9D006F6E01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D49F3CCE283AD3830046AE0F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				D482383F2838277B001D63CF /* TimeCounter.swift */,
 				D4823841283827A0001D63CF /* UserManager.swift */,
 				D49F3CCE283AD3830046AE0F /* DataManager.swift */,
-				D495A2222836AE9C006F6E01 /* ContentView.swift */,
 				D495A2242836AE9D006F6E01 /* Assets.xcassets */,
 				D495A2262836AE9D006F6E01 /* Preview Content */,
 			);
@@ -166,7 +163,6 @@
 				D4823842283827A0001D63CF /* UserManager.swift in Sources */,
 				D49F3CCF283AD3830046AE0F /* DataManager.swift in Sources */,
 				D482383C2838272A001D63CF /* RegisterView.swift in Sources */,
-				D495A2232836AE9C006F6E01 /* ContentView.swift in Sources */,
 				D482383E28382747001D63CF /* StarterView.swift in Sources */,
 				D48238402838277B001D63CF /* TimeCounter.swift in Sources */,
 				D495A2212836AE9C006F6E01 /* StateAndDataFlowSwiftUIApp.swift in Sources */,

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ButtonAppearanceModifier: ViewModifier {
-    
     let color: Color
     
     func body(content: Content) -> some View {
